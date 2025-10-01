@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Amarillas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="intro" id="intro">
+    <img src="img/primero.jpg" alt="Intro" class="intro-img" id="intro-img">
+    <p class="intro-text" id="intro-text">
+      Hoy no solo quiero regalarte algo,<br>
+      sino también un pedacito de aquello que disfrutas,<br>
+      para que siempre recuerdes al niño que llevas dentro,<br>
+      ese lado divertido y auténtico que te hace especial<br>
+      y que me encanta, igual que cuando hablas de tu anime favorito.
+    </p>
+  </div>
+  <div class="flowers-container" id="carritos" style="display:none;">
+    <div class="flower-card" id="carrito-card">
+      <img src="img/beru trust only one.jpg" alt="Carrito" class="flower-img" id="carrito-img">
+      <p class="flower-text" id="carrito-text">
+        🚗 Me gusta mucho compartir tiempo contigo.<br>
+        Ojalá poco a poco podamos ir construyendo confianza.<br>
+        Aunque no seas pro en el Left, siempre te elegiría en mi team 😏.
+      </p>
+    </div>
+  </div>
+  <script>
+    window.onload = function() {
+      const carritos = [
+        {img: 'img/beru trust only one.jpg', frase: '🚗 Me gusta mucho compartir tiempo contigo.<br>Ojalá poco a poco podamos ir construyendo confianza.<br>Aunque no seas pro en el Left, siempre te elegiría en mi team 😏.'},
+        {img: 'img/descarga (1).jpg', frase: '🚗 Gracias por tener paciencia conmigo (sé que a veces soy un poquito intensa).'},
+        {img: 'img/descarga (2).jpg', frase: '🚗 Me haces sentir que eres alguien especial para mí.'},
+        {img: 'img/descarga.jpg', frase: '🚗 Me emociona la idea de seguir viviendo más momentos contigo.'},
+        {img: 'img/jin Woo_Solo Leveling.jpg', frase: '🚗 Te quiero un montón.'},
+        {img: 'img/JINWOO SUNG SOLO LEVELING.jpg', frase: '🚗 Eres alguien auténtico, no pierdas eso.'},
+        {img: 'img/Sung Jin-Woo.jpg', frase: '🚗 Cuídate mucho, ¿sí?.'}
+      ];
+      let current = 0;
+      const img = document.getElementById('carrito-img');
+      const text = document.getElementById('carrito-text');
+      const intro = document.getElementById('intro');
+      const introImg = document.getElementById('intro-img');
+      const carritosDiv = document.getElementById('carritos');
+      introImg.onclick = function() {
+        intro.style.display = 'none';
+        carritosDiv.style.display = 'flex';
+        current = 0;
+        img.src = carritos[current].img;
+        text.innerHTML = carritos[current].frase;
+      };
+      document.getElementById('carrito-card').onclick = function() {
+        current = (current + 1) % carritos.length;
+        img.src = carritos[current].img;
+        text.innerHTML = carritos[current].frase;
+      };
+    }
+  </script>

@@ -1,0 +1,135 @@
+/* Frase final */
+.final-message {
+  width: 100vw;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Segoe Script', 'Comic Sans MS', cursive, Arial, sans-serif;
+  font-weight: bold;
+  color: #ffe066;
+  background: rgba(24, 24, 48, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+  margin: 3rem auto 2rem auto;
+  padding: 1.5rem 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.intro-text {
+  white-space: pre-line;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fffbe6;
+  font-family: 'Segoe Script', 'Comic Sans MS', cursive, Arial, sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 90vw;
+  line-height: 1.6;
+  background: rgba(24, 24, 48, 0.7);
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+  padding: 2rem 2rem 1.5rem 2rem;
+  letter-spacing: 1px;
+  border: 2px solid #ffe066;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: url('img/fondooficial.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+.intro-text {
+  white-space: pre-line;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #b8860b;
+  font-weight: 500;
+  margin: 0 auto;
+  max-width: 90vw;
+  line-height: 1.5;
+}
+
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #b8860b;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.intro-img {
+  width: 320px;
+  max-width: 90vw;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  margin-bottom: 2rem;
+}
+
+.flowers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 2vw 2vw 2vw;
+}
+
+
+.flower-card {
+  background: #181830;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s;
+}
+
+.flower-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+}
+
+.flower-img {
+  width: 220px;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.flower-text {
+  background: rgba(255,255,255,0.13);
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  width: 90%;
+}
+
+@media (max-width: 900px) {
+  .flowers-container {
+    gap: 1rem;
+  }
+  .flower-card {
+    width: 95vw;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .flower-img {
+    width: 80vw;
+    max-width: 220px;
+  }
+}
